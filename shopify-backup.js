@@ -36,10 +36,22 @@ const productsData = require('./shopify-catalog-urls.json');
 // console.log(imageData.length); // 5445
 
 // const productsSlice = productsData.slice(0, 200); // 28
-const productsSlice = productsData.slice(200, 400); //
+// const productsSlice = productsData.slice(200, 400); // 61
 // const productsSlice = productsData.slice(400, 600); // 94
+// const productsSlice = productsData.slice(600, 800); // 123
+// const productsSlice = productsData.slice(800, 1000); // 123
+// const productsSlice = productsData.slice(1000, 1200); // 153
+// const productsSlice = productsData.slice(1200, 1400); // 179
+// const productsSlice = productsData.slice(1400, 1600); // 202
+// const productsSlice = productsData.slice(0, 1800); // 219
+// const productsSlice = productsData.slice(0, 2000); // 244
+// const productsSlice = productsData.slice(0, 2200); // 273
+// const productsSlice = productsData.slice(0, 2400); // 307
+// const productsSlice = productsData.slice(0, 2600); // 337
+// const productsSlice = productsData.slice(0, 2800); // 364
+const productsSlice = productsData.slice(0, 3000); // 364
 
-const imagesNames = [];
+const imagesNames = require('./imagesNames.json') ?? [];
 
 for (product of productsSlice) {
   const { imageURL } = product;
@@ -59,7 +71,9 @@ for (product of productsSlice) {
           .then(console.log)
           .catch(console.error);
 
-        imagesNames.push(`${imageName}.jpg`);
+        if (!imagesNames.includes(`${imageName}.jpg`)) {
+          imagesNames.push(`${imageName}.jpg`);
+        }
 
         fs.writeFileSync('imagesNames.json', JSON.stringify(imagesNames));
       }, 1000);
