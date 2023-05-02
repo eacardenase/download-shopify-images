@@ -1,6 +1,6 @@
 // const { downloadImage } = require('./Utils/downloadImage');
 
-require('./yu-gi-oh');
+require('./shopify-backup');
 
 // const folderPath = './img/';
 
