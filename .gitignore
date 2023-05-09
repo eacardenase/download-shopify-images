@@ -7,3 +7,7 @@ digimon-list.json
 catalogs-cleaned.csv
 shopify-catalog-urls.json
 imagesNames.json
+/shopify-images
+*.csv
+*.zip
+.DS_Store
