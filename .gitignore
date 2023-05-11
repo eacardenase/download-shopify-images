@@ -8,6 +8,10 @@ catalogs-cleaned.csv
 shopify-catalog-urls.json
 imagesNames.json
 /shopify-images
+
+# Files
 *.csv
 *.zip
+*.xlsx
+
 .DS_Store
