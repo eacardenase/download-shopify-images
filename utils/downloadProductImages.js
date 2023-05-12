@@ -6,8 +6,6 @@ function downloadProductImages(shopName, regex, productsArray) {
   const imagesNames =
     require(`../catalogs/final/${shopName}-images-names.json`) ?? [];
 
-  console.log(productsArray);
-
   for (product of productsArray) {
     const { imageURL } = product;
 

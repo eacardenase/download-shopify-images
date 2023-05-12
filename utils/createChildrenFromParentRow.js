@@ -14,8 +14,6 @@ const data = fs
     return rowArray;
   });
 
-console.log(data.length);
-
 const dataWithSimpleProducts = [];
 
 for (let i = 0; i < data.length; i++) {

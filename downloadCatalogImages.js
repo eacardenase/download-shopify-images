@@ -6,11 +6,11 @@ const {
   readCatalogData,
 } = require('./utils');
 
-const shopName = 'salute';
+const shopName = 'futsal';
 
-const regexVariant1 = '0554';
-const regexVariant2 = '7078';
-const regexVariant3 = '4696';
+const regexVariant1 = '0348';
+const regexVariant2 = '1924';
+const regexVariant3 = '4170';
 
 const regex = new RegExp(
   `https:\\/\\/cdn.shopify.com\\/s\\/files\\/1\\/${regexVariant1}\\/${regexVariant2}\\/${regexVariant3}\\/products\\/(?<imageName>.*).(?<fileExtension>(jpg|png))`
@@ -26,8 +26,6 @@ const filename = `./catalogs/final/${shopName}-finished.csv`;
 createCSVWithImagesNames(shopName, filename, arrayWithImageURL);
 
 // ### Download Images
-
-console.log(catalogImagesURL);
 
 downloadProductImages(shopName, regex, catalogImagesURL);
 
