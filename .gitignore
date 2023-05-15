@@ -1,17 +1,9 @@
+.DS_Store
+
 /node_modules
-/yugiohImages
-yu-gi-oh-images.json
-yu-gi-oh-data.json
-digimon-array.json
-digimon-list.json
-catalogs-cleaned.csv
-shopify-catalog-urls.json
-imagesNames.json
 /shopify-images
 
 # Files
 *.csv
 *.zip
 *.xlsx
-
-.DS_Store
