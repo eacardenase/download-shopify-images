@@ -1,2 +1,3 @@
-// require('./createChildrenFromParentRow');
-require('./downloadCatalogImages');
+require('./utils/createChildrenFromParentRow');
+// require('./downloadCatalogImages');
+// require('./utils/createCustomSKU');

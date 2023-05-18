@@ -6,7 +6,9 @@ const sizes = ['SM', 'MD', 'LG', 'XL', '2XL', '3XL'];
 const shopName = 'youth';
 
 const data = fs
-  .readFileSync(`./catalogs/origin/${shopName}.csv`, { encoding: 'utf-8' })
+  .readFileSync(`./catalogs/origin/${shopName}-catalog.csv`, {
+    encoding: 'utf-8',
+  })
   .split('\n')
   .map((row) => {
     let rowArray = row.split(',').map((data) => data.replace('\r', ''));
@@ -36,7 +38,7 @@ for (let i = 0; i < data.length; i++) {
   }
 }
 
-const filename = `./catalogs/final/${shopName}-finished.csv`;
+const filename = `./catalogs/final/${shopName}-children.csv`;
 const writableStream = fs.createWriteStream(filename);
 
 const stringifier = stringify({ header: false });

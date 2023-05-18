@@ -6,11 +6,11 @@ const {
   readCatalogData,
 } = require('./utils');
 
-const shopName = 'jva';
+const shopName = 'swimming';
 
-const regexVariant1 = '0605';
-const regexVariant2 = '2249';
-const regexVariant3 = '6171';
+const regexVariant1 = '0549';
+const regexVariant2 = '9122';
+const regexVariant3 = '5019';
 
 const regex = new RegExp(
   `https:\\/\\/cdn.shopify.com\\/s\\/files\\/1\\/${regexVariant1}\\/${regexVariant2}\\/${regexVariant3}\\/products\\/(?<imageName>.*).(?<fileExtension>(jpg|png))`
