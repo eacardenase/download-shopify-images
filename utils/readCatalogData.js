@@ -8,8 +8,8 @@ function readCatalogData(catalogFilePath, regex) {
     .split('\n')
     .map((row) => {
       const rowArray = row.split(',').map((data) => data.replace('\r', ''));
-      const baseImageURL = rowArray[24];
-      const variantImageURL = rowArray[43];
+      const baseImageURL = rowArray[25];
+      const variantImageURL = rowArray[44];
 
       let regexData = '';
       let imageName = '';

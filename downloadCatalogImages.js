@@ -8,9 +8,9 @@ const {
 
 const shopName = 'swimming';
 
-const regexVariant1 = '0549';
-const regexVariant2 = '9122';
-const regexVariant3 = '5019';
+const regexVariant1 = '0074';
+const regexVariant2 = '4682';
+const regexVariant3 = '2965';
 
 const regex = new RegExp(
   `https:\\/\\/cdn.shopify.com\\/s\\/files\\/1\\/${regexVariant1}\\/${regexVariant2}\\/${regexVariant3}\\/products\\/(?<imageName>.*).(?<fileExtension>(jpg|png))`

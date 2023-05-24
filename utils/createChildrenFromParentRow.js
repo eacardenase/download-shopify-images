@@ -3,7 +3,7 @@ const fs = require('fs');
 const { stringify } = require('csv-stringify');
 
 const sizes = ['SM', 'MD', 'LG', 'XL', '2XL', '3XL'];
-const shopName = 'youth';
+const shopName = 'swimming';
 
 const data = fs
   .readFileSync(`./catalogs/origin/${shopName}-catalog.csv`, {

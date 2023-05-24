@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "csv": "^6.2.11"
+    "csv": "^6.2.11",
+    "image-downloader": "^4.3.0"
   }
 }

@@ -1,6 +1,8 @@
 const fs = require('fs');
 
-const { downloadImage } = require('./downloadImage');
+// const { downloadImage } = require('./downloadImage');
+
+const downloadImage = require('image-downloader');
 
 function downloadProductImages(shopName, regex, productsArray) {
   const imagesNames =
@@ -14,11 +16,17 @@ function downloadProductImages(shopName, regex, productsArray) {
       const imageName = regexData?.groups?.imageName;
       const basePath = `./shopify-images/${shopName}/${imageName}`;
 
+      const options = {
+        url: imageURL,
+        dest: basePath + '.jpg',
+      };
+
       if (!imagesNames.includes(`${imageName}.jpg`)) {
         setTimeout(() => {
-          downloadImage(imageURL, `${basePath}.jpg`)
-            .then(console.log)
-            .catch(console.error);
+          downloadImage
+            .image(options)
+            .then(({ filename }) => console.log('Saved to', filename))
+            .catch((err) => console.log(err));
 
           if (!imagesNames.includes(`${imageName}.jpg`)) {
             imagesNames.push(`${imageName}.jpg`);
