@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const { stringify } = require('csv-stringify');
 
-const shopName = 'swimming';
+const shopName = 'judo';
 
 const data = fs
   .readFileSync(`./catalogs/origin/${shopName}-catalog.csv`, {
