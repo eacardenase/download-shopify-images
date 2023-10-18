@@ -5,4 +5,5 @@
 // require('./utils/parseUsersFile');
 // require('./utils/findDuplicates');
 // require('./utils/parseClinicalCases');
-require('./utils/downloadDropboxImages');
+// require('./utils/downloadDropboxImages');
+require('./utils/get-files');
