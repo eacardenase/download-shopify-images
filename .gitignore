@@ -11,3 +11,5 @@
 /utils/data
 
 /utils/dropbox-images/*
+
+.env
