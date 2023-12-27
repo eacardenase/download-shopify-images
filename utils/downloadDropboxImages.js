@@ -4,25 +4,31 @@ const download = require('image-downloader');
 const destFolder = path.join(__dirname, 'dropbox-images');
 const imageUrls = require('./data/artwork_urls.json');
 
-const downloadImages = async () => {
-  const downloadTasks = imageUrls.slice(0, 100).map((url, index) => {
-    const options = {
-      url,
-      dest: destFolder,
-      timeout: 20000, // Adjust the timeout (in milliseconds) as needed
-    };
+const startIndex = 0;
+const endIndex = startIndex + 100;
 
-    return download
-      .image(options)
-      .then(({ filename }) => {
+const downloadImages = async () => {
+  const downloadTasks = imageUrls
+    .slice(startIndex, endIndex)
+    .map(async (url) => {
+      const options = {
+        url,
+        dest: destFolder,
+        timeout: 20000, // Adjust the timeout (in milliseconds) as needed
+      };
+
+      try {
+        const { filename } = await download.image(options);
+
         console.log(`Saved ${url} to ${filename}`);
+
         return { success: true, filename };
-      })
-      .catch((error) => {
+      } catch (error) {
         console.error(`Error downloading ${url}:`, error);
+
         return { success: false, url };
-      });
-  });
+      }
+    });
 
   try {
     const downloadedImages = await Promise.all(downloadTasks);

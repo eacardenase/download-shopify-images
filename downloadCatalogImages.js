@@ -7,7 +7,7 @@ const {
   readCatalogData,
 } = require('./utils');
 
-const shopName = 'judo';
+const shopName = 'jva';
 
 const regexVariant1 = '0637';
 const regexVariant2 = '8861';

@@ -6,5 +6,6 @@
 // require('./utils/findDuplicates');
 // require('./utils/parseClinicalCases');
 // require('./utils/dropbox-api');
-require('./utils/downloadDropboxImages');
 // require('./utils/get-files');
+require('./utils/downloadDropboxImages');
+// require('./utils/readCatalogData');
